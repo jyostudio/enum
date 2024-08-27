@@ -43,7 +43,7 @@ class RenderType extends Enum {
   }
 }
 
-console.log(RenderType.CSR);
+console.dir(RenderType.CSR);
 console.dir(RenderType.SSG);
 console.dir(RenderType.SSR);
 ```
