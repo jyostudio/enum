@@ -80,12 +80,22 @@ class NetworkType extends Enum {
 const fn = overload()
   .add([RenderType], function (value) {
     console.log(`渲染类型为：${value.description}, ${+value}`);
+
+    switch(value) {
+      case RenderType.CSR: console.log("走到了 CSR 逻辑"); break;
+      case RenderType.SSG: console.log("走到了 SSG 逻辑"); break;
+      case RenderType.SSR: console.log("走到了 SSR 逻辑"); break;
+    }
   })
   .add([NetworkType], function (value) {
     console.log(`网络类型为：${value.description}, ${+value}`);
   });
 
-fn(RenderType.SSR); // 渲染类型为：SSR, 2
+/**
+ * 渲染类型为：SSR, 2
+ * 走到了 SSR 逻辑
+ */
+fn(RenderType.SSR);
 fn(NetworkType["5G"]); // 网络类型为：5G, 5
 ```
 

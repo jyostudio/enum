@@ -1,6 +1,6 @@
 {
   "name": "@jyostudio/enum",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "enum",
   "source": "src/enum.js",
   "main": "src/enum.js",
