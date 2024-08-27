@@ -1,0 +1,33 @@
+{
+  "name": "@jyostudio/enum",
+  "version": "0.0.1",
+  "description": "enum",
+  "source": "src/enum.js",
+  "main": "src/enum.js",
+  "unpkg": "dist/enum.js",
+  "jsdelivr": "dist/enum.js",
+  "type": "module",
+  "types": "types/enum.d.ts",
+  "typings": "types/enum.d.ts",
+  "scripts": {
+    "publish": "npm publish --access public",
+    "build": "esbuild src/enum.js --bundle --minify --sourcemap --format=esm --outfile=dist/enum.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyostudio/enum.git"
+  },
+  "keywords": [
+    "enum"
+  ],
+  "author": "nivk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jyostudio/enum/issues"
+  },
+  "homepage": "https://github.com/jyostudio/enum#readme",
+  "devDependencies": {
+    "@jyostudio/overload": "^0.0.9",
+    "esbuild": "^0.23.0"
+  }
+}
