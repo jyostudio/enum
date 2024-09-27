@@ -1,6 +1,6 @@
 {
   "name": "@jyostudio/enum",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "enum",
   "source": "src/enum.js",
   "main": "src/enum.js",
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/jyostudio/enum#readme",
   "devDependencies": {
-    "@jyostudio/overload": "^0.0.9",
+    "@jyostudio/overload": "^0.0.12",
     "esbuild": "^0.23.0"
   }
 }

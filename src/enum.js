@@ -108,7 +108,7 @@ export default class Enum {
          * @param {String} typeConvter - 类型转换器
          * @returns {Enum | null}
          */
-        const getFn = (value, typeConvter) => {
+        function getFn(value, typeConvter) {
             const allEnum = this.getAll();
             for (let i = allEnum.length; i--;) {
                 if (allEnum[i][typeConvter] === value) return allEnum[i];
@@ -119,19 +119,19 @@ export default class Enum {
 
         Enum.getByValue = overload()
             .add([Number], function (value) {
-                return getFn(value, "valNumber");
+                return getFn.call(this, value, "valNumber");
             })
             .add([String], function (value) {
-                return getFn(value, "valString");
+                return getFn.call(this, value, "valString");
             })
             .add([Boolean], function (value) {
-                return getFn(value, "valBoolean");
+                return getFn.call(this, value, "valBoolean");
             })
             .add([Enum], function (value) {
                 return this.getByValue(value.valNumber);
             })
             .add([Object], function (value) {
-                return getFn(value, "valObject");
+                return getFn.call(this, value, "valObject");
             });
 
         return Enum.getByValue.apply(this, params);
