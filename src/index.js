@@ -89,10 +89,14 @@ export default class Enum {
                 const allNames = Object.getOwnPropertyNames(this);
 
                 for (let i = 0; i < allNames.length; i++) {
-                    if (allNames[i] === "prototype") continue;
+                    if (allNames[i] === "prototype") {
+                        continue;
+                    }
 
                     const p = this[allNames[i]];
-                    if (typeof p === "object" && p instanceof Enum) list.push(p);
+                    if (typeof p === "object" && p instanceof Enum) {
+                        list.push(p);
+                    }
                 }
 
                 return list;
@@ -111,7 +115,9 @@ export default class Enum {
         function getFn(value, typeConvter) {
             const allEnum = this.getAll();
             for (let i = allEnum.length; i--;) {
-                if (allEnum[i][typeConvter] === value) return allEnum[i];
+                if (allEnum[i][typeConvter] === value) {
+                    return allEnum[i];
+                }
             }
 
             return null;
@@ -148,7 +154,9 @@ export default class Enum {
                 function (value) {
                     let allEnum = this.getAll();
                     for (let i = allEnum.length; i--;) {
-                        if (allEnum[i].description === value) return allEnum[i];
+                        if (allEnum[i].description === value) {
+                            return allEnum[i];
+                        }
                     }
 
                     return null;

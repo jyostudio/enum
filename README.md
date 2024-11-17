@@ -10,7 +10,7 @@
 ```HTML
 <script type="importmap">
   {
-    imports: {
+    "imports": {
       "@jyostudio/enum": "https://unpkg.com/@jyostudio/enum"
     }
   }
