@@ -1,7 +1,7 @@
 /**
  * 枚举类
  */
-declare class Enum {
+export default class Enum {
   /**
    * 描述
    */
